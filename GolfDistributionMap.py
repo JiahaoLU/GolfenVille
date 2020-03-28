@@ -20,7 +20,7 @@ import pandas as pd
 def draw_distribution_map():
     filename='./plottings/dmap'
 
-    fr_chart = pygal_maps_fr.maps.Departments(human_readable=True)
+    fr_chart = pygal_maps_fr.maps.Departments(human_readable=True, legend_at_bottom=True)
     fr_chart.title = 'Nombre de golfs par département'
     fr_chart.add('Départements avec plus de 20 golfs en 2019',
                  {'06': 21, '13': 20, '33': 20, '78': 30, '83': 21})
@@ -77,4 +77,4 @@ def draw_player_sorting():
 
 
 if __name__ == '__main__':
-    draw_player_sorting()
+    draw_distribution_map()
